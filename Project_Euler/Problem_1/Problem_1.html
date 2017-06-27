@@ -1,0 +1,21 @@
+<script>
+
+var multiplesOfThree = 0;
+var multiplesOfFive = 0;
+
+var i = 0;
+
+while (i <= 999) {
+  if (i % 3 == 0) {
+    multiplesOfThree += i;
+  }
+  else if (i % 5 == 0) {
+    multiplesOfFive += i;
+  }
+
+  i += 1;
+}
+
+console.log(multiplesOfThree + multiplesOfFive);
+
+</script>
