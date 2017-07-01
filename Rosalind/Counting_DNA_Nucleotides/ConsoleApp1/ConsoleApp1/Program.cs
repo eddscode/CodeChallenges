@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string dnaString = "GGCTTCCTATGCGCGCTTGCTGGCATGTGGGCGTGACTTTCCTGAGATGGAGAAACTCATGCGTTAATACGCACGTTTAAGGAAAGACGCCGATAGGTACGGCGCTCGGTGCGATCAAGCCAGTTCCGTTGATTCAATCAGACACACGGGCGCACGGATCTCAAACGTACCGTAGAGGCTCGGGCACACCTGAATGGGGCGTGTTCAGGAAGTGACAGTCACCTGGTAACCCCAAAAAGTTAATGTGGTGCCTAGCATAGAACTGGGAACGGCGTGTAGTAGATGACAAACGGCGACTTGAGCAGACCACATGTCCTACGCTCACTTAGTCTGATTCGCCCCCTTCTAGATTATCTTCCTACAGCATGCTTGCGCACCGTATGGCGGAATCGTCACAGTTACAGTTACACTGTATGATCCCGTGGCATCGCCTAAAAAGGGCGCAGCCAATGGATCAAGAAAAAACCACGGACAGCAAAGTCGGATACACAAATGTATAAAGTCCTGTGGTGATCCAGCGCGGCTGGATTATTAAGATGGTTTCATGTGACAGATCTTACGTACCTCGCTATCCCCGACTGGCTCGTCCGGTAACGGCTGGATAACGGAACGACCGGCTCGGACAATTTACGACTCTCGTGTGAAAACCCATAATCGCTGGCAAATACACATTGACCAGTCCACCTATGCCCTGCTCAGCCGAGCTAGCTGTTGCTTTAGTAACCGTAAAGAACCAGGTCGGTATAAAGCCGGATTCCTGCGGTTCTGCGGGGTACTGATTACACGTCTTGGTCTACACTGATTGTACGGCGCTGAGAGGTGATTGGGGGGTGATGCTTGCGTGATTAATCTCCAG";
+            char[] dnaStringArray = dnaString.ToCharArray();
+
+            int A = 0, C = 0, G = 0, T = 0;
+
+            foreach (char c in dnaStringArray)
+            {
+                if (c == 'A')
+                {
+                    A += 1;
+                }
+                else if (c == 'C')
+                {
+                    C += 1;
+                }
+                else if (c == 'G')
+                {
+                    G += 1;
+                }
+                else if (c == 'T')
+                {
+                    T += 1;
+                }
+            }
+
+            Console.WriteLine($"{A} {C} {G} {T}");
+            Console.ReadKey();
+        }
+    }
+}
